@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="card">
-          <FormattedDate />
           <Search />
+          <FormattedDate />
         </div>
       </div>
     </div>
