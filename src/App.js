@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Search from "./Search";
+import FormattedDate from "./FormattedDate";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="card">
-          <h1>Weather Search Engine</h1>
+          <FormattedDate />
           <Search />
         </div>
       </div>

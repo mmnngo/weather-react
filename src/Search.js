@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Grid } from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./App.css";
