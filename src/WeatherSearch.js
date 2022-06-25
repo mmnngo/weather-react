@@ -5,14 +5,12 @@ import { Grid } from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./App.css";
 
-export default function Search() {
+export default function WeatherSearch(props) {
   const [weatherDescription, setWeatherDescription] = useState({
     ready: false,
   });
-  let city = "New York";
 
-  function handleResponse(response) {
-    console.log(response.data);
+  function handleSubmit(response) {
     setWeatherDescription({
       ready: true,
       temperature: response.data.main.temp,
@@ -23,6 +21,7 @@ export default function Search() {
       city: response.data.name,
     });
   }
+
   if (weatherDescription.ready) {
     return (
       <div className="Search">
@@ -59,9 +58,9 @@ export default function Search() {
     );
   } else {
     const apiKey = "65b5662e22ff1bb3952c072792011a99";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
 
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleSubmit);
     return <Grid color="#00BFFF" height={80} width={80} />;
   }
 }
