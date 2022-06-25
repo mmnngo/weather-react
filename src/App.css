@@ -31,6 +31,17 @@ p {
   border: 1px solid black;
 }
 
+.btn-primary {
+  background-color: #2e94b9 !important;
+}
+.btn-outline-primary {
+  opacity: 0.8;
+}
+.btn:hover {
+  transition: all 200ms ease;
+  background-color: #2e94b9;
+  border-color: #2e94b9;
+}
 .current-date {
   color: #475053;
   margin: 5px 0;
@@ -42,6 +53,16 @@ p {
   padding: 0%;
   position: relative;
   top: -8px;
+}
+
+.icon {
+  text-align: center;
+}
+
+.contact-me {
+  color: black;
+  font-size: 12px;
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
