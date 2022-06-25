@@ -73,6 +73,16 @@ function App() {
             <div className="weather-forecast">Weather Forecast</div>
           </div>
         </div>
+        <p className="contact-me">
+          This page was built by May Ngo and is open-sourced on{" "}
+          <a
+            href="https://github.com/mmnngo/weather-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </p>
       </div>
     </div>
   );
