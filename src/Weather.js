@@ -8,6 +8,8 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
+      maxTemp: response.data.main.temp_max,
+      minTemp: response.data.main.temp_min,
       description: response.data.weather[0].description,
       city: response.data.name,
       humidity: response.data.main.humidity,
@@ -66,10 +68,16 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-8">
             <ul className="current-high-low">
-              <li id="weather-description">{weatherData.description}</li>
-              <li id="current-high-low"> 18°C / 6°C </li>
+              <li className="text-capitalize" id="weather-description">
+                {weatherData.description}
+              </li>
+              <li id="current-high-low">
+                {" "}
+                {Math.round(weatherData.maxTemp)}°C /{" "}
+                {Math.round(weatherData.minTemp)}°C{" "}
+              </li>
               <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind} km/hr</li>
+              <li>Wind: {Math.round(weatherData.wind)} km/hr</li>
             </ul>
           </div>
           <div className="col-4">
