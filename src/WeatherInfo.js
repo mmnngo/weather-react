@@ -19,7 +19,7 @@ export default function WeatherInfo(props) {
       </div>
       <div className="row">
         <div className="col-8">
-          <ul className="current-high-low">
+          <ul className="weather-data">
             <li className="text-capitalize">{props.data.description}</li>
             <li className="current-max-min">
               {" "}

@@ -21,6 +21,11 @@ p {
   top: -8px;
 }
 
+.WeatherInfo .weather-data {
+  position: relative;
+  left: 4px;
+}
+
 .WeatherInfo .minTemp {
   opacity: 0.8;
 }
@@ -64,7 +69,7 @@ p {
 
 .current-date {
   color: #475053;
-  margin: 5px 0;
+  margin: 5px 4px;
   text-align: start;
 }
 
